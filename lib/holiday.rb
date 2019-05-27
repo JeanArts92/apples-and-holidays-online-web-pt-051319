@@ -51,9 +51,8 @@ end
 
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
    holiday_hash.map do |season, holiday|
-  holiday.map do |holiday_name, supply_for_holiday|
     if season == :spring
-      season << supply_array
+      season << holiday_name
     end
   end
   holiday_hash[:season][:holiday_name] = supply_for_holiday
