@@ -24,7 +24,7 @@ end
 def add_supply_to_winter_holidays(holiday_hash, supply)
   holiday_hash.map do |season, holiday|
   holiday.map do |holiday_name, supply_for_holiday|
-    if supply_for_holiday == ["Lights", "Wreath"] && ["Party Hats"]
+    if season == :winter
     supply_for_holiday << supply
   end
   end
