@@ -64,7 +64,7 @@ def all_supplies_in_holidays(holiday_hash)
     holiday.each do |holiday_name, supply_for_holiday|
      if season == :winter
        print supply_for_holiday.values 
-     end
+     end 
   # iterate through holiday_hash and print items such that your readout resembles:
   # Winter:
   #   Christmas: Lights, Wreath
