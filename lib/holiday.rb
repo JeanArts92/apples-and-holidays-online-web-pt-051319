@@ -39,16 +39,24 @@ end
 def add_supply_to_memorial_day(holiday_hash, supply)
   holiday_hash.map do |season, holiday|
   holiday.map do |holiday_name, supply_for_holiday|
-    if holiday_name == :spring
-      supply_for_holiday << supply 
+    if season == :spring
+      season << holiday_name
     end
   end
+  holiday_hash[:season][:holiday_name] = supply_for_holiday
+end
   # again, holiday_hash is the same as the ones above
   # add the second argument to the memorial day array
 
 end
 
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
+  holiday_hash.map do |season, holiday|
+    if season == :fall
+      holiday << holiday_name
+      holiday[:holiday_name] = supply_array
+    end
+  end
   # code here
   # remember to return the updated hash
 
