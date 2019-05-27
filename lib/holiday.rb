@@ -55,7 +55,7 @@ def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_arr
       season << holiday_name
     end
   end
-  holiday_hash[:season][:holiday_name] = supply_for_holiday
+  holiday_hash[:season][:holiday_name] = supply_array
 end
 
 end
