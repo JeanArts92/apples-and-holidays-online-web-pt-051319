@@ -54,6 +54,8 @@ def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_arr
     if season == :fall
       holiday << holiday_name
       holiday[:holiday_name] = supply_array
+    end
+  end
   # code here
   # remember to return the updated hash
 
